@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+</head>
+<style>
+    .content {
+        max-width: 700px;
+        padding: 50px;
+        margin: auto;
+    }
+    th, td{
+        padding: 7px;
+        border: 1px solid rgb(134, 134, 134);
+    }
+    table {
+        border: 1px solid rgb(222, 222, 222);
+    }
+    th {
+        background-color: darkgrey;
+    }
+</style>
+<body>
+    <!-- <ul>
+        {% for x in fruits %}
+            <h3> 
+                <li style="color: {% cycle 'red' 'blue' 'brown' 'pink' 'gold' %} ">{{x}}</li>
+            </h3>
+        {% endfor %}
+
+    </ul>
+    {% filter lower %}
+        <h1>Welcome our Django App</h1>
+    {% endfilter %}
+    <p>In views.py you can see what the fruits variable looks like.</p> -->
+<h3>This BlogSite</h3>
+<div class="content">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Post</th>
+            </tr>
+            {% for x in blogs %}
+            <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.title}}</td>
+                <td>{{x.post}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    Blog - List of Authors
+{% endblock %}
+    
+    
+{% block content %}
+    <div class="mycard">
+        <h1>Blogs</h2>
+        <ul>
+            {% for x in myblog %}
+                <li><a onclick='window.location = "details/{{x.id}}"'> {{ x.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+{% endblock %}

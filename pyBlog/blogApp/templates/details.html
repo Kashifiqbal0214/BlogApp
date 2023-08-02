@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+
+
+{% block title %} 
+    Details about {{ myblog.name }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="mycard">
+        <h1>{{ myblog.name }}</h1>
+        <p class="title"><i>Title:</i> {{myblog.title}}</p>
+        <p><i>Post:</i> {{myblog.post}}</p>
+        <p class="date">Post Date: <em style="font-weight: 300;">{{myblog.post_date}}</em></p>
+    </div>
+    
+
+{% endblock content %}
